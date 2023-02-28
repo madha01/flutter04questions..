@@ -1,0 +1,40 @@
+setfunction(){
+printelement(e)=>print(e);
+// 01.Intesection;
+setIntersection(set s1,sets2){
+return s1.intersection(s2);
+}
+//02. Difference;
+setDifference(set s1,set s2){
+return s1.differnce(s2);
+}
+// 03.Transverse;
+setTraverse(set s1){
+return s1.forEach(printelement);
+}
+// 04.Till 10;
+traversetill10(set s2){
+s2.where((e)=>e>10).forEach(printelement);
+}
+// 05.till 50;
+traversetill50(set s2){
+s2.where((e)=>e>50).forEach(printelement);
+}
+return[
+setIntersection,
+setDifference,
+setTraverse,
+traversetill10,
+traversetill50
+];
+}
+
+void main(){
+set<int> s1 = {1,2,3,4,5,6,7,8};
+set<int> s2 = {9,8,7,6,5,4,3,2,1};
+print(setfunction()[0](s1,s2));
+print(setfunction()[1](s1,s2));
+print(setfunction()[2](s1));
+print(setfunction()[3](s2));
+print(setfunction()[4](s2));
+}
