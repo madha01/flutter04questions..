@@ -1,0 +1,3 @@
+void main(){
+print([23,67,89,12,3,45,98].where((e)=>e>200).reduce((a,b)=>a+b));
+}
